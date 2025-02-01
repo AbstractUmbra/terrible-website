@@ -7,6 +7,19 @@
     font-family: 'Comic Sans';
 }
 
+body {
+    background-color: darkslategrey;
+    color: rgb(237, 209, 209)
+}
+
+a:link {
+    color: lightcoral
+}
+
+a:visited {
+    color: rgb(251, 115, 66)
+}
+
 table {
     border-collapse: collapse;
     padding: 5px;
@@ -15,15 +28,18 @@ table {
 th,
 td {
     border: hidden;
-    border-color: #96D4D4;
     border-radius: 1px;
     padding: 5px;
 }
 
 tr:nth-child(even) {
-    background-color: lightgray;
+    background-color: rgb(74, 119, 119);
 }
 
 tr:nth-child(odd) {
-    background-color: white;
+    background-color: rgb(67, 103, 103);
+}
+
+td.text-center {
+    text-align: center;
 }

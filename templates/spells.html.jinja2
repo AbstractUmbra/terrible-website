@@ -13,7 +13,7 @@
         </tr>
         {% for number, spell in spells.items() %}
         <tr>
-            <td><a href="https://ffxivcollect.com/spells{{ number }}">{{ number }}</a></td>
+            <td class="text-center"><a href="https://ffxivcollect.com/spells{{ number }}">{{ number }}</a></td>
             <td>{{ spell.name }}</td>
             {% if spell.dungeon is defined %}
             <td>{{ spell.dungeon }}</td>

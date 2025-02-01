@@ -3,5 +3,8 @@ services:
     image: ghcr.io/abstractumbra/terrible-website:latest
     container_name: "website"
     restart: "unless-stopped"
+    volumes:
+      - ./static:/app/static:ro
+      - ./templates:/app/templates:ro
     ports:
       - 8030:8030

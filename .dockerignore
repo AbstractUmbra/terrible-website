@@ -6,8 +6,8 @@
 .vscode/
 .pdm-python
 
-repos/
-api_key
+static/
+templates/
 docker-compose.yaml
 compose.override.yaml
 Dockerfile
