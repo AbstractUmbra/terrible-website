@@ -1,6 +1,6 @@
 services:
   website:
-    image: ghcr.io/abstractumbra/website:latest
+    image: ghcr.io/abstractumbra/terrible-website:latest
     container_name: "website"
     restart: "unless-stopped"
     ports:
