@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "Comic Sans";
+    src: url("../static/comic.ttf");
+}
+
+* {
+    font-family: 'Comic Sans';
+}
+
+table {
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+th,
+td {
+    border: hidden;
+    border-color: #96D4D4;
+    border-radius: 1px;
+    padding: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+}

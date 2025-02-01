@@ -1,0 +1,14 @@
+.git/
+.github/
+.gitignore
+.ruff_cache/
+.venv/
+.vscode/
+.pdm-python
+
+repos/
+api_key
+docker-compose.yaml
+compose.override.yaml
+Dockerfile
+README.md

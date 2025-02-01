@@ -1,0 +1,33 @@
+{% extends "base.html.jinja2" %}
+{% block title %}BLU Spells{% endblock %}
+{% block content %}
+    <h1>Spells I need</h1>
+    <br>
+    <table id="spell-list">
+        <tr>
+            <th>Spell Number</th>
+            <th>Spell Name</th>
+            <th>Spell in Dungeon?</th>
+            <th>Spell in Trial?</th>
+            <th>Spell Enemy</th>
+        </tr>
+        {% for number, spell in spells.items() %}
+        <tr>
+            <td><a href="https://ffxivcollect.com/spells{{ number }}">{{ number }}</a></td>
+            <td>{{ spell.name }}</td>
+            {% if spell.dungeon is defined %}
+            <td>{{ spell.dungeon }}</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            {% if spell.trial is defined %}
+            <td>{{ spell.trial }}</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            <td>{{ spell.enemy }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+{% endblock %}

@@ -1,0 +1,7 @@
+services:
+  website:
+    image: ghcr.io/abstractumbra/website:latest
+    container_name: "website"
+    restart: "unless-stopped"
+    ports:
+      - 8030:8030

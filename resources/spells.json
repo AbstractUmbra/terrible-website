@@ -1,0 +1,72 @@
+{
+    "80": {
+        "name": "J-Kick",
+        "trial": "Alexander - Burden of the Son",
+        "enemy": "Brute Justice"
+    },
+    "83": {
+        "name": "Tatami-gaeshi",
+        "dungeon": "Kugane Castle",
+        "enemy": "Dojun-maru (2nd boss)"
+    },
+    "85": {
+        "name": "Stotram",
+        "trial": "Emanation",
+        "enemy": "Lakshmi"
+    },
+    "86": {
+        "name": "Saintly Beam",
+        "trial": "Sigmascape V1.0",
+        "enemy": "Phantom Train"
+    },
+    "93": {
+        "name": "Blaze",
+        "trial": "Deltascape V1.0",
+        "enemy": "Alte Roite"
+    },
+    "94": {
+        "name": "Mustard Bomb",
+        "trial": "Alphascape V3.0",
+        "enemy": "Omega"
+    },
+    "101": {
+        "name": "Peripheral Synthesis",
+        "trial": "Alphascape V3.0",
+        "enemy": "Omega"
+    },
+    "111": {
+        "name": "Peat Pelt",
+        "dungeon": "Matoya's Relict",
+        "enemy": "Mudman"
+    },
+    "113": {
+        "name": "Ruby Dynamics",
+        "trial": "Cinder Drift",
+        "enemy": "The Ruby Weapon"
+    },
+    "114": {
+        "name": "Divination Rune",
+        "trial": "The Dancing Plague",
+        "enemy": "Titania"
+    },
+    "115": {
+        "name": "Dimensional Shift",
+        "trial": "Eden's Gate: Resurrection",
+        "enemy": "Eden Prime"
+    },
+    "118": {
+        "name": "Winged Reprobation",
+        "trial": "The Crown of the Immaculate",
+        "enemy": "Innocence"
+    },
+    "119": {
+        "name": "Laser Eye",
+        "trial": "Eden's Promise: Eternity",
+        "enemy": "Eden's Promise"
+    },
+    "124": {
+        "name": "Being Mortal",
+        "trial": "The Dancing Plague",
+        "enemy": "Titania"
+    }
+}
