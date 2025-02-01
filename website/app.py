@@ -42,8 +42,7 @@ async def show_blu_spell_list(request: Request[str, str, State]) -> Template:
 
 
 APP = Litestar(
-    debug=True,
-    route_handlers=[show_blu_spell_list],
+    route_handlers=[index, show_blu_spell_list],
     template_config=TemplateConfig(directory=TEMPLATE_DIRECTORY, engine=JinjaTemplateEngine),
     static_files_config=[StaticFilesConfig(path="static", directories=[STATIC_DIRECTORY])],
 )
