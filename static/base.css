@@ -9,7 +9,8 @@
 
 body {
     background-color: darkslategrey;
-    color: rgb(237, 209, 209)
+    color: rgb(237, 209, 209);
+    ;
 }
 
 a:link {
@@ -20,9 +21,24 @@ a:visited {
     color: rgb(251, 115, 66)
 }
 
+h1 {
+    text-align: center;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+div#footer {
+    text-align: center;
+}
+
 table {
     border-collapse: collapse;
     padding: 5px;
+}
+
+table#spell-list {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 th,
