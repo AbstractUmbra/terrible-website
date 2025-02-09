@@ -1,14 +1,5 @@
 {
-    "80": {
-        "name": "J-Kick",
-        "trial": "Alexander - Burden of the Son",
-        "enemy": "Brute Justice"
-    },
-    "83": {
-        "name": "Tatami-gaeshi",
-        "dungeon": "Kugane Castle",
-        "enemy": "Dojun-maru (2nd boss)"
-    },
+    "$schema": "https://static.abstractumbra.dev/schemas/blu-spells.json",
     "85": {
         "name": "Stotram",
         "trial": "Emanation",
@@ -23,21 +14,6 @@
         "name": "Blaze",
         "trial": "Deltascape V1.0",
         "enemy": "Alte Roite"
-    },
-    "94": {
-        "name": "Mustard Bomb",
-        "trial": "Alphascape V3.0",
-        "enemy": "Omega"
-    },
-    "101": {
-        "name": "Peripheral Synthesis",
-        "trial": "Alphascape V3.0",
-        "enemy": "Omega"
-    },
-    "111": {
-        "name": "Peat Pelt",
-        "dungeon": "Matoya's Relict",
-        "enemy": "Mudman"
     },
     "113": {
         "name": "Ruby Dynamics",

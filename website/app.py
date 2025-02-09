@@ -16,9 +16,10 @@ if TYPE_CHECKING:
 __all__ = ("APP",)
 
 
-TEMPLATE_DIRECTORY = pathlib.Path(__file__).parent.parent / "templates"
-STATIC_DIRECTORY = pathlib.Path(__file__).parent.parent / "static"
-SPELLS = pathlib.Path(__file__).parent.parent / "resources" / "spells.json"
+ROOT_DIRECTORY = pathlib.Path(__file__).parent.parent
+TEMPLATE_DIRECTORY = ROOT_DIRECTORY / "templates"
+STATIC_DIRECTORY = ROOT_DIRECTORY / "static"
+SPELLS = ROOT_DIRECTORY / "resources" / "spells.json"
 
 
 class Spell(TypedDict):
@@ -29,14 +30,15 @@ class Spell(TypedDict):
 
 
 @get("/")
-async def index() -> Template:
+async def index() -> Template:  # noqa: RUF029 # needed for litestar callbacks
     return Template("base.html.jinja2")
 
 
 @get("/blu/spells")
-async def show_blu_spell_list(request: Request[str, str, State]) -> Template:
+async def show_blu_spell_list(request: Request[str, str, State]) -> Template:  # noqa: RUF029 # needed for litestar callbacks
     with SPELLS.open("r", encoding="utf-8") as fp:
         data: dict[str, Spell] = orjson.loads(fp.read())
+        data.pop("$schema")
 
     return Template("spells.html.jinja2", context={"spells": data})
 
