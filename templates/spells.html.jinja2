@@ -1,33 +1,43 @@
 {% extends "base.html.jinja2" %}
+{% block head %}
+{{ super() }}
+<script src="../static/spells.js" type="text/javascript"></script>
+{% endblock %}
 {% block title %}BLU Spells{% endblock %}
 {% block content %}
     <h1>Spells I need</h1>
     <br>
     <table id="spell-list">
-        <tr>
-            <th>Spell Number</th>
-            <th>Spell Name</th>
-            <th>Spell in Dungeon?</th>
-            <th>Spell in Trial?</th>
-            <th>Spell Enemy</th>
-        </tr>
-        {% for number, spell in spells.items() %}
-        <tr>
-            <td class="text-center"><a href="https://ffxivcollect.com/spells{{ number }}">{{ number }}</a></td>
-            <td>{{ spell.name }}</td>
-            {% if spell.dungeon is defined %}
-            <td>{{ spell.dungeon }}</td>
-            {% else %}
-            <td></td>
-            {% endif %}
-            {% if spell.trial is defined %}
-            <td>{{ spell.trial }}</td>
-            {% else %}
-            <td></td>
-            {% endif %}
-            <td>{{ spell.enemy }}</td>
-        </tr>
-        {% endfor %}
+        <thead>
+            <tr id="spell-header">
+                <th>Spell Number</th>
+                <th>Spell Name</th>
+                <th>Spell in Dungeon?</th>
+                <th>Spell in Trial?</th>
+                <th>Spell Enemy</th>
+                <th>Copy PF text</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for number, spell in spells.items() %}
+            <tr>
+                <td class="text-center"><a href="https://ffxivcollect.com/spells{{ number }}">{{ number }}</a></td>
+                <td>{{ spell.name }}</td>
+                {% if spell.dungeon is defined %}
+                <td>{{ spell.dungeon }}</td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                {% if spell.trial is defined %}
+                <td>{{ spell.trial }}</td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                <td>{{ spell.enemy }}</td>
+                <td style="text-align: center;"><button onclick="copyToClipboard({{ number }})" class="spell-cb-button" id="spell-{{ number }}">📋</button></td>
+            </tr>
+            {% endfor %}
+        </tbody>
     </table>
     <br>
 {% endblock %}

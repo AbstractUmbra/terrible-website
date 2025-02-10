@@ -48,11 +48,15 @@ td {
     padding: 5px;
 }
 
-tr:nth-child(even) {
+table#spell-list>thead>tr#spell-header {
+    background-color: rgb(67, 103, 103);
+}
+
+table#spell-list>tbody>tr:nth-child(odd) {
     background-color: rgb(74, 119, 119);
 }
 
-tr:nth-child(odd) {
+table#spell-list>tbody>tr:nth-child(even) {
     background-color: rgb(67, 103, 103);
 }
 
