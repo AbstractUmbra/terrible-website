@@ -1,10 +1,5 @@
 {
     "$schema": "https://static.abstractumbra.dev/schemas/blu-spells.json",
-    "85": {
-        "name": "Stotram",
-        "trial": "Emanation",
-        "enemy": "Lakshmi"
-    },
     "86": {
         "name": "Saintly Beam",
         "trial": "Sigmascape V1.0",
@@ -29,6 +24,10 @@
         "name": "Dimensional Shift",
         "trial": "Eden's Gate: Resurrection",
         "enemy": "Eden Prime"
+    },
+    "117": {
+        "name": "Force Field",
+        "totem": true
     },
     "118": {
         "name": "Winged Reprobation",

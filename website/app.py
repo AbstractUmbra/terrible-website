@@ -26,6 +26,7 @@ class Spell(TypedDict):
     name: str
     dungeon: NotRequired[str]
     trial: NotRequired[str]
+    totem: NotRequired[bool]
     enemy: str
 
 

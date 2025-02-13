@@ -6,15 +6,17 @@
 {% block title %}BLU Spells{% endblock %}
 {% block content %}
     <h1>Spells I need</h1>
+    <h2 style="text-align: center;" id="spell-counter">Spell total: {{ 124 - spells|length }}/124</h2>
     <br>
     <table id="spell-list">
         <thead>
             <tr id="spell-header">
                 <th>Spell Number</th>
                 <th>Spell Name</th>
-                <th>Spell in Dungeon?</th>
-                <th>Spell in Trial?</th>
-                <th>Spell Enemy</th>
+                <th>Dungeon</th>
+                <th>Trial</th>
+                <th>Totem</th>
+                <th>Enemy</th>
                 <th>Copy PF text</th>
             </tr>
         </thead>
@@ -30,6 +32,11 @@
                 {% endif %}
                 {% if spell.trial is defined %}
                 <td>{{ spell.trial }}</td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                {% if spell.totem is defined %}
+                <td style="text-align: center;"><input type="checkbox" name="{{spell.name}}" disabled checked></td>
                 {% else %}
                 <td></td>
                 {% endif %}
