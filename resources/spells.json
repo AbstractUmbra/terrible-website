@@ -10,38 +10,9 @@
         "trial": "Deltascape V1.0",
         "enemy": "Alte Roite"
     },
-    "113": {
-        "name": "Ruby Dynamics",
-        "trial": "Cinder Drift",
-        "enemy": "The Ruby Weapon"
-    },
-    "114": {
-        "name": "Divination Rune",
-        "trial": "The Dancing Plague",
-        "enemy": "Titania"
-    },
-    "115": {
-        "name": "Dimensional Shift",
-        "trial": "Eden's Gate: Resurrection",
-        "enemy": "Eden Prime"
-    },
-    "117": {
-        "name": "Force Field",
-        "totem": true
-    },
     "118": {
         "name": "Winged Reprobation",
         "trial": "The Crown of the Immaculate",
         "enemy": "Innocence"
-    },
-    "119": {
-        "name": "Laser Eye",
-        "trial": "Eden's Promise: Eternity",
-        "enemy": "Eden's Promise"
-    },
-    "124": {
-        "name": "Being Mortal",
-        "trial": "The Dancing Plague",
-        "enemy": "Titania"
     }
 }
