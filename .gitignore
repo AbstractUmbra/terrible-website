@@ -6,3 +6,4 @@ repos/
 test.py
 api_key
 compose.override.yaml
+purge.*
