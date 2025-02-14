@@ -1,14 +1,14 @@
 {% extends "base.html.jinja2" %}
 {% block head %}
 {{ super() }}
-<script src="../static/spells.js" type="text/javascript"></script>
+<script src="/static/spells.js" type="text/javascript"></script>
 {% endblock %}
 {% block title %}BLU Spells{% endblock %}
 {% block content %}
 <h1>Spells I need</h1>
 <h2 style="text-align: center;" id="spell-counter">Spell total: {{ 124 - spells|length }}/124</h2>
 <br>
-{% if variable is defined and variable|length %}
+{% if spells is defined and spells|length %}
 <table id="spell-list">
     <thead>
         <tr id="spell-header">
@@ -39,10 +39,10 @@
             {% if spell.totem is defined %}
             <td style="text-align: center;"><input type="checkbox" name="{{spell.name}}" disabled checked></td>
             {% else %}
-            <td></td>
+            <td style="text-align: center;"><input type="checkbox" name="{{spell.name}}" disabled></td>
             {% endif %}
             <td>{{ spell.enemy }}</td>
-            <td style="text-align: center;"><button onclick="copyToClipboard({{ number }})" class="spell-cb-button" id="spell-{{ number }}">📋</button></td>
+            <td style="text-align: center;"><button onclick="copyToClipboard({{ number }}, '{{ spell.name }}')" class="spell-cb-button" id="spell-{{ number }}">📋</button></td>
         </tr>
         {% endfor %}
     </tbody>

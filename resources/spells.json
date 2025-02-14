@@ -1,18 +1,3 @@
 {
-    "$schema": "https://static.abstractumbra.dev/schemas/blu-spells.json",
-    "86": {
-        "name": "Saintly Beam",
-        "trial": "Sigmascape V1.0",
-        "enemy": "Phantom Train"
-    },
-    "93": {
-        "name": "Blaze",
-        "trial": "Deltascape V1.0",
-        "enemy": "Alte Roite"
-    },
-    "118": {
-        "name": "Winged Reprobation",
-        "trial": "The Crown of the Immaculate",
-        "enemy": "Innocence"
-    }
+    "$schema": "https://static.abstractumbra.dev/schemas/blu-spells.json"
 }
