@@ -7,6 +7,9 @@ services:
       - ./static:/app/static:ro
       - ./templates:/app/templates:ro
       - ./resources:/app/resources:ro
+    environment:
+      CONFIG_PATH: /app_config
+      CSRF_SECRET_FILE: /run/secrets/csrf
     ports:
       - 8030:8030
     secrets:
