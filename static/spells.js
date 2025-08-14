@@ -1,4 +1,4 @@
-async function copyToClipboard(number) {
+async function copySpellToClipboard(number) {
     let entry = document.getElementById(`spell-${number}`);
 
     await navigator.clipboard.writeText(`BLU Spell #${number} - Pref healer, but can switch\nHelpers welcome too! Sync or helper boosted unsync works.`);

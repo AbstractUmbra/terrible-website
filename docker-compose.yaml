@@ -9,3 +9,14 @@ services:
       - ./resources:/app/resources:ro
     ports:
       - 8030:8030
+    secrets:
+      - csrf
+    configs:
+      - app_config
+
+configs:
+  app_config:
+    file: configs/app.json
+secrets:
+  csrf:
+    file: secrets/csrf

@@ -1,0 +1,64 @@
+{% extends "base.html.jinja2" %}
+{% block head %}
+{{ super() }}
+<script src="/static/cards.js" type="text/javascript"></script>
+{% endblock %}
+{% block title %}Triple Triad Cards{% endblock %}
+{% block content %}
+<h1>Cards I need</h1>
+<h2 style="text-align: center;" id="card-counter">Spell total: {{ 448 - cards|length }}/448</h2>
+<br>
+{% if cards is defined and cards|length %}
+<table id="card-list">
+    <thead>
+        <tr id="card-header">
+            <th>Card Number</th>
+            <th>Card Name</th>
+            <th>NPC</th>
+            <th>Event</th>
+            <th>Dungeon</th>
+            <th>Trial</th>
+            <th>Gemstones</th>
+            <th>Copy PF text</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for number, card in cards.items() %}
+        <tr>
+            <td class="text-center"><a href="https://ffxivcollect.com/cards/{{ number }}">{{ number }}</a></td>
+            <td>{{ card.name }}</td>
+            {% if card.npc is defined %}
+            <td>{{ card.npc }}</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            {% if card.event is defined %}
+            <td>{{ card.event }}</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            {% if card.dungeon is defined %}
+            <td>{{ card.dungeon }} -> {{ card.enemy }} boss</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            {% if card.trial is defined %}
+            <td>{{ card.trial }}</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            {% if card.gemstones is defined %}
+            <td>{{ card.gemstones.area }} -> {{ card.gemstones.npc }} ({{ card.gemstones.cost }} bicolour gems)</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            <td style="text-align: center;"><button onclick="copyCardToClipboard({{ number }})" class="card-cb-button" id="card-{{ number }}">📋</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<h2 style="text-align: center;">No more cards needed!!!</h2>
+{% endif %}
+<br>
+{% endblock %}

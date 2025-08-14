@@ -42,7 +42,7 @@
             <td style="text-align: center;"><input type="checkbox" name="{{spell.name}}" disabled></td>
             {% endif %}
             <td>{{ spell.enemy }}</td>
-            <td style="text-align: center;"><button onclick="copyToClipboard({{ number }}, '{{ spell.name }}')" class="spell-cb-button" id="spell-{{ number }}">📋</button></td>
+            <td style="text-align: center;"><button onclick="copySpellToClipboard({{ number }}, '{{ spell.name }}')" class="spell-cb-button" id="spell-{{ number }}">📋</button></td>
         </tr>
         {% endfor %}
     </tbody>

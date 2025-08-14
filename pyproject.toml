@@ -3,19 +3,13 @@ name = "site"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [{ name = "Alex Nørgaard", email = "umbra@abstractumbra.dev" }]
-dependencies = ["litestar[standard]>=2.14.0", "orjson>=3.10.15"]
-requires-python = ">=3.12"
+dependencies = ["litestar[standard,brotli]>=2.14.0", "orjson>=3.10.15"]
+requires-python = ">=3.13"
 readme = "README.md"
 license = { text = "MIT" }
 
 [dependency-groups]
 dev = ["ruff"]
-
-[tool.pdm]
-distribution = false
-
-[tool.pdm.build]
-includes = []
 
 [tool.ruff]
 line-length = 125
@@ -23,52 +17,7 @@ target-version = "py312"
 
 [tool.ruff.lint]
 preview = true
-select = [
-    "A",
-    "ANN",
-    "ASYNC",
-    "B",
-    "BLE",
-    "C4",
-    "COM",
-    "DTZ",
-    "E",
-    "EM",
-    "ERA",
-    "F",
-    "FA",
-    "FBT",
-    "FURB",
-    "G",
-    "I",
-    "INP",
-    "ISC",
-    "NPY",
-    "PD",
-    "PERF",
-    "PGH",
-    "PIE",
-    "PLC",
-    "PLE",
-    "PLW",
-    "PTH",
-    "PYI",
-    "Q",
-    "Q003",
-    "RET",
-    "RSE",
-    "RUF",
-    "S",
-    "SIM",
-    "SLOT",
-    "T20",
-    "TC",
-    "TID",
-    "TRY",
-    "UP",
-    "YTT",
-    "DOC",
-]
+select = ["ALL"]
 ignore = [
     "ANN401",
     "COM812",
@@ -136,4 +85,4 @@ inline-quotes = "double"
 [tool.pyright]
 useLibraryCodeForTypes = true
 typeCheckingMode = "strict"
-pythonVersion = "3.12"
+pythonVersion = "3.13"

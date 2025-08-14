@@ -36,7 +36,8 @@ table {
     padding: 5px;
 }
 
-table#spell-list {
+table#spell-list,
+table#card-list {
     margin-left: auto;
     margin-right: auto;
 }
@@ -48,15 +49,18 @@ td {
     padding: 5px;
 }
 
-table#spell-list>thead>tr#spell-header {
+table#spell-list>thead>tr#spell-header,
+table#card-list>thead>tr#card-header {
     background-color: rgb(67, 103, 103);
 }
 
-table#spell-list>tbody>tr:nth-child(odd) {
+table#spell-list>tbody>tr:nth-child(odd),
+table#card-list>tbody>tr:nth-child(odd) {
     background-color: rgb(74, 119, 119);
 }
 
-table#spell-list>tbody>tr:nth-child(even) {
+table#spell-list>tbody>tr:nth-child(even),
+table#card-list>tbody>tr:nth-child(even) {
     background-color: rgb(67, 103, 103);
 }
 
