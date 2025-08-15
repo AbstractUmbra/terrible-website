@@ -67,3 +67,18 @@ table#card-list>tbody>tr:nth-child(even) {
 td.text-center {
     text-align: center
 }
+
+.spoiler {
+    background-color: grey;
+    color: transparent;
+    user-select: none;
+}
+
+.spoiler>td {
+    content: 'SPOILER'
+}
+
+.spoiler:hover {
+    background-color: inherit;
+    color: inherit;
+}

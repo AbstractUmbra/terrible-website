@@ -89,18 +89,17 @@
     "429": {
         "name": "Immortal Remains",
         "dungeon": "The Meso Terminal",
-        "enemy": "Immortal Remains"
-    },
-    "430": {
-        "name": "Kam'lanaut",
-        "npc": "Hume Black Mage"
+        "enemy": "Immortal Remains",
+        "spoiler": true
     },
     "431": {
         "name": "Eald'narche",
-        "trial": "San D'Oria: The Second Walk"
+        "trial": "San D'Oria: The Second Walk",
+        "spoiler": true
     },
     "432": {
         "name": "Necron",
-        "trial": "The Ageless Necropolis"
+        "trial": "The Ageless Necropolis",
+        "spoiler": true
     }
 }

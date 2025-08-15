@@ -6,7 +6,7 @@
 {% block title %}Triple Triad Cards{% endblock %}
 {% block content %}
 <h1>Cards I need</h1>
-<h2 style="text-align: center;" id="card-counter">Spell total: {{ 448 - cards|length }}/448</h2>
+<h2 style="text-align: center;" id="card-counter">Card total: {{ 448 - cards|length }}/448</h2>
 <br>
 {% if cards is defined and cards|length %}
 <table id="card-list">
@@ -24,7 +24,11 @@
     </thead>
     <tbody>
         {% for number, card in cards.items() %}
+        {% if card.spoiler is defined and card.spoiler is true %}
+        <tr class="spoiler">
+        {% else %}
         <tr>
+        {% endif %}
             <td class="text-center"><a href="https://ffxivcollect.com/cards/{{ number }}">{{ number }}</a></td>
             <td>{{ card.name }}</td>
             {% if card.npc is defined %}

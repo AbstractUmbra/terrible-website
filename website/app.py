@@ -51,6 +51,7 @@ class Card(TypedDict):
     enemy: NotRequired[str]
     pack: NotRequired[str]
     gemstones: NotRequired[_CardGemstones]
+    spoiler: NotRequired[bool]
 
 
 @get("/")
@@ -58,7 +59,7 @@ async def index() -> Template:  # noqa: RUF029 # needed for litestar callbacks
     return Template("base.html.jinja2")
 
 
-@get("/blu/spells")
+@get("/blu/spells", cache=60)
 async def show_blu_spell_list() -> Template:  # noqa: RUF029 # needed for litestar callbacks
     with SPELLS.open("r", encoding="utf-8") as fp:
         data: dict[str, Spell] = orjson.loads(fp.read())
@@ -67,7 +68,7 @@ async def show_blu_spell_list() -> Template:  # noqa: RUF029 # needed for litest
     return Template("spells.html.jinja2", context={"spells": data})
 
 
-@get("/cards")
+@get("/cards", cache=60)
 async def show_card_list() -> Template:  # noqa: RUF029 # needed for litestar callbacks
     with CARDS.open("r", encoding="utf-8") as fp:
         data: dict[str, Card] = orjson.loads(fp.read())
