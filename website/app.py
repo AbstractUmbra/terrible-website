@@ -74,6 +74,8 @@ async def show_card_list() -> Template:  # noqa: RUF029 # needed for litestar ca
         data: dict[str, Card] = orjson.loads(fp.read())
         data.pop("$schema")
 
+    data = dict(sorted(data.items(), key=lambda i: int(i[0])))
+
     return Template("cards.html.jinja2", context={"cards": data})
 
 
