@@ -1,5 +1,6 @@
 ARG PYTHON_BASE=3.13-slim-bookworm
 ARG UV_BASE=python3.13-bookworm-slim
+ARG APP_PORT=8030
 
 FROM ghcr.io/astral-sh/uv:${UV_BASE} AS builder
 
@@ -28,5 +29,7 @@ WORKDIR /app
 
 COPY --from=builder --chown=1000:1000 /project /app
 ENV PATH="/app/.venv/bin:$PATH"
+
+EXPOSE $APP_PORT
 
 CMD ["python", "-O", "runner.py"]
