@@ -1,0 +1,48 @@
+{% extends "base.html.jinja2" %}
+{% block head %}
+{{ super() }}
+<script src="/static/beasts.js" type="text/javascript"></script>
+{% endblock %}
+{% block title %}Beast Tamer tames{% endblock %}
+{% block content %}
+<h1>Tames I need</h1>
+<h2 style="text-align: center;" id="tame-counter">Beast total: {{ 999 - beasts|length }}/124</h2>
+<br>
+{% if beasts is defined and beasts|length %}
+<table id="beast-list">
+    <thead>
+        <tr id="beast-header">
+            <th>Beast Number</th>
+            <th>Beast Name</th>
+            <th>Dungeon</th>
+            <th>Trial</th>
+            <th>Enemy</th>
+            <th>Copy PF text</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for number, beast in beasts.items() %}
+        <tr>
+            <td class="text-center"><a href="https://ffxivcollect.com/beasts/{{ number }}">{{ number }}</a></td>
+            <td>{{ beast.name }}</td>
+            {% if beast.dungeon is defined %}
+            <td>{{ beast.dungeon }}</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            {% if beast.trial is defined %}
+            <td>{{ beast.trial }}</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            <td>{{ beast.enemy }}</td>
+            <td style="text-align: center;"><button onclick="copyBeastToClipboard({{ number }}, '{{ beast.name }}')" class="beast-cb-button" id="beast-{{ number }}">📋</button></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<h2 style="text-align: center;">No more tames needed!!!</h2>
+{% endif %}
+<br>
+{% endblock %}

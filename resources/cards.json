@@ -1,105 +1,64 @@
 {
     "$schema": "https://static.abstractumbra.dev/schemas/tt-cards.json",
-    "69": {
-        "name": "Firion",
-        "event": "Triple Triad Tournament",
-        "pack": "Platinum"
-    },
-    "71": {
-        "name": "Cecil Harvey",
-        "event": "Triple Triad Tournament",
-        "pack": "Platinum"
-    },
-    "80": {
-        "name": "Lightning",
-        "event": "Triple Triad Tournament",
-        "pack": "Platinum"
-    },
-    "315": {
-        "name": "Ea",
-        "gemstones": {
-            "npc": "N-1499",
-            "area": "Base Omicron",
-            "cost": 200
-        }
-    },
-    "320": {
-        "name": "Amon The Undying",
-        "dungeon": "The Aitascope",
-        "enemy": "Amon The Undying"
-    },
-    "329": {
-        "name": "Zodiark",
-        "trial": "The Dark Inside"
-    },
     "332": {
         "name": "Ericthonios",
         "trial": "Asphodelos: The First Circle"
     },
     "333": {
-        "name": "Rampart",
         "dungeon": "Alzadaal's Legacy",
-        "enemy": "Rampart"
-    },
-    "338": {
-        "name": "Chi",
-        "gemstones": {
-            "npc": "N-1499",
-            "area": "Base Omicron",
-            "cost": 300
-        }
+        "enemy": "Rampart",
+        "name": "Rampart"
     },
     "339": {
-        "name": "Daivadipa",
         "gemstones": {
-            "npc": "Mahveydah",
             "area": "Yedlihmad",
-            "cost": 300
-        }
-    },
-    "343": {
-        "name": "Beatrice",
-        "dungeon": "The Fell Court of Troia",
-        "enemy": "Beatrice"
+            "cost": 300,
+            "npc": "Mahveydah"
+        },
+        "name": "Daivadipa"
     },
     "362": {
-        "name": "Gancanagh",
-        "event": "Eureka Orthos"
+        "event": "Eureka Orthos",
+        "name": "Gancanagh"
     },
     "424": {
         "name": "Howling Blade",
         "trial": "AAC Cruiserweight M4"
     },
     "425": {
-        "name": "Magitaur",
-        "event": "The Forked  Tower: Blood"
-    },
-    "426": {
-        "name": "Blue Leafkin",
-        "event": "Mamool-ja Allied Society"
-    },
-    "427": {
-        "name": "Wivre",
-        "npc": "Pudeel Ja"
-    },
-    "428": {
-        "name": "Doppro",
-        "npc": "Pudeel Ja"
-    },
-    "429": {
-        "name": "Immortal Remains",
-        "dungeon": "The Meso Terminal",
-        "enemy": "Immortal Remains",
-        "spoiler": true
+        "event": "The Forked  Tower: Blood",
+        "name": "Magitaur"
     },
     "431": {
         "name": "Eald'narche",
-        "trial": "San D'Oria: The Second Walk",
-        "spoiler": true
+        "spoiler": true,
+        "trial": "San D'Oria: The Second Walk"
     },
-    "432": {
-        "name": "Necron",
-        "trial": "The Ageless Necropolis",
-        "spoiler": true
+    "435": {
+        "allied_society": "Yok Huy",
+        "name": "Rorrlo Teh"
+    },
+    "436": {
+        "dungeon": "Pilgrim's Traverse",
+        "name": "Ornamental Leafman"
+    },
+    "437": {
+        "allied_society": "Yok Huy",
+        "name": "Fahrafahr",
+        "npc": "Rarkorgor"
+    },
+    "438": {
+        "achievement": "Triple-decker XIV",
+        "name": "Dawntrail Krile"
+    },
+    "69": {
+        "event": "Triple Triad Tournament",
+        "name": "Firion",
+        "pack": "Platinum"
+    },
+    "71": {
+        "event": "Triple Triad Tournament",
+        "name": "Cecil Harvey",
+        "pack": "Platinum"
     }
 }

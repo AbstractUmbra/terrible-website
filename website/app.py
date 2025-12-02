@@ -24,6 +24,7 @@ TEMPLATE_DIRECTORY = ROOT_DIRECTORY / "templates"
 STATIC_DIRECTORY = ROOT_DIRECTORY / "static"
 SPELLS = ROOT_DIRECTORY / "resources" / "spells.json"
 CARDS = ROOT_DIRECTORY / "resources" / "cards.json"
+BEASTS = ROOT_DIRECTORY / "resources" / "beasts.json"
 
 APP_CONFIG = load_config_type(resolve_docker_config(env_var_name="CONFIG_PATH"), Config)
 
@@ -54,6 +55,13 @@ class Card(TypedDict):
     spoiler: NotRequired[bool]
 
 
+class Beast(TypedDict):
+    name: str
+    dungeon: NotRequired[str]
+    trial: NotRequired[str]
+    enemy: str
+
+
 @get("/")
 async def index() -> Template:  # noqa: RUF029 # needed for litestar callbacks
     return Template("base.html.jinja2")
@@ -77,6 +85,17 @@ async def show_card_list() -> Template:  # noqa: RUF029 # needed for litestar ca
     data = dict(sorted(data.items(), key=lambda i: int(i[0])))
 
     return Template("cards.html.jinja2", context={"cards": data})
+
+
+@get("/beasts", cache=60)
+async def show_beast_list() -> Template:  # noqa: RUF029 # needed for litestar callbacks
+    with BEASTS.open("r", encoding="utf-8") as fp:
+        data: dict[str, Card] = orjson.loads(fp.read())
+        data.pop("$schema")
+
+    data = dict(sorted(data.items(), key=lambda i: int(i[0])))
+
+    return Template("beasts.html.jinja2", context={"beasts": data})
 
 
 APP = Litestar(

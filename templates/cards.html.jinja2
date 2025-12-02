@@ -6,7 +6,7 @@
 {% block title %}Triple Triad Cards{% endblock %}
 {% block content %}
 <h1>Cards I need</h1>
-<h2 style="text-align: center;" id="card-counter">Card total: {{ 448 - cards|length }}/448</h2>
+<h2 style="text-align: center;" id="card-counter">Card total: {{ 454 - cards|length }}/454</h2>
 <br>
 {% if cards is defined and cards|length %}
 <table id="card-list">
@@ -18,7 +18,9 @@
             <th>Event</th>
             <th>Dungeon</th>
             <th>Trial</th>
+            <th>Allied Society</th>
             <th>Gemstones</th>
+            <th>Achievement</th>
             <th>Copy PF text</th>
         </tr>
     </thead>
@@ -51,8 +53,18 @@
             {% else %}
             <td></td>
             {% endif %}
+            {% if card.allied_society is defined %}
+            <td>{{ card.allied_society }}</td>
+            {% else %}
+            <td></td>
+            {% endif %}
             {% if card.gemstones is defined %}
             <td>{{ card.gemstones.area }} -> {{ card.gemstones.npc }} ({{ card.gemstones.cost }} bicolour gems)</td>
+            {% else %}
+            <td></td>
+            {% endif %}
+            {% if card.achievement is defined %}
+            <td>{{ card.achievement }}</td>
             {% else %}
             <td></td>
             {% endif %}
