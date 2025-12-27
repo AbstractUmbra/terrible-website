@@ -31,25 +31,24 @@
     },
     "431": {
         "name": "Eald'narche",
-        "spoiler": true,
         "trial": "San D'Oria: The Second Walk"
-    },
-    "435": {
-        "allied_society": "Yok Huy",
-        "name": "Rorrlo Teh"
     },
     "436": {
         "dungeon": "Pilgrim's Traverse",
         "name": "Ornamental Leafman"
     },
-    "437": {
-        "allied_society": "Yok Huy",
-        "name": "Fahrafahr",
-        "npc": "Rarkorgor"
-    },
     "438": {
         "achievement": "Triple-decker XIV",
         "name": "Dawntrail Krile"
+    },
+    "439": {
+        "dungeon": "Mistwake",
+        "enemy": "Thundergust Griffin",
+        "name": "Thundergust Griffin"
+    },
+    "441": {
+        "name": "Lindwurm",
+        "trial": "AAC Heavyweight M4"
     },
     "69": {
         "event": "Triple Triad Tournament",
