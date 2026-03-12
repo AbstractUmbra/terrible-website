@@ -108,7 +108,7 @@ APP = Litestar(
     compression_config=APP_CONFIG.compression.to_litestar(),
     response_cache_config=APP_CONFIG.response_cache.to_litestar(),
     logging_config=LoggingConfig(
-        disable_stack_trace={404}, log_exceptions="always", root={"level": "INFO", "handlers": ["queue_listener"]}
+        disable_stack_trace={200, 404}, log_exceptions="always", root={"level": "INFO", "handlers": ["queue_listener"]}
     ),
     template_config=TemplateConfig(directory=TEMPLATE_DIRECTORY, engine=JinjaTemplateEngine),
     static_files_config=[StaticFilesConfig(path="static", directories=[STATIC_DIRECTORY])],
