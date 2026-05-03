@@ -82,3 +82,29 @@ td.text-center {
     background-color: inherit;
     color: inherit;
 }
+
+div#header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(67, 103, 103);
+    display: flex;
+    justify-content: center;
+}
+
+div#header ul li {
+    float: left;
+}
+
+div#header ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+div#header ul li a:hover {
+    background-color: rgb(67, 103, 103);
+}

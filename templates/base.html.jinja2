@@ -25,7 +25,20 @@
     {% endblock %}
 </head>
 <body>
-    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="header">
+    {% block header_content %}
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/cards">Triple Triad Cardlist</a></li>
+            <li><a href="/blu/spells">Blue Mage Spellbook</a></li>
+            <li><a href="/beasts">Beastmaster tames</a></li>
+        </ul>
+    {% endblock%}
+    </div
+    <div id="content">
+    {% block content %}
+    {% endblock %}
+    </div>
     <div id="footer">
         {% block footer %}
         &copy; Copyright 2025 by <a href="https://abstractumbra.dev">Umbra/Link</a>
