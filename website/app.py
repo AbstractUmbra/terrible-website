@@ -100,7 +100,7 @@ async def show_beast_list() -> Template:  # noqa: RUF029 # needed for litestar c
 
 APP = Litestar(
     debug=APP_CONFIG.debug,
-    route_handlers=[index, show_blu_spell_list, show_card_list],
+    route_handlers=[index, show_blu_spell_list, show_card_list, show_beast_list],
     middleware=[ServerSideSessionConfig().middleware, LoggingMiddlewareConfig().middleware],
     csrf_config=APP_CONFIG.csrf.to_litestar(),
     cors_config=APP_CONFIG.cors.to_litestar(),
